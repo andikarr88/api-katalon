@@ -104,4 +104,7 @@ println('RC is : ' + RC)
 WS.verifyResponseStatusCode(danaPaymentResponse, 200)
 
 WS.verifyElementPropertyValue(danaPaymentResponse, 'responseCode', '00')
-
+String responseBody = danaPaymentResponse.getResponseBodyContent()
+// Menampilkan response body di console
+println("Response Body:")
+println(responseBody)

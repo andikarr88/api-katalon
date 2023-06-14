@@ -120,4 +120,7 @@ GlobalVariable.nationalPmtData = replacedNationalPmtData
 println('National Payment Data is : ' + replacedNationalPmtData)
 
 WS.verifyResponseStatusCode(danaInquiryResponse, 200)
-
+String responseBody = danaInquiryResponse.getResponseBodyContent()
+// Menampilkan response body di console
+println("Response Body:")
+println(responseBody)

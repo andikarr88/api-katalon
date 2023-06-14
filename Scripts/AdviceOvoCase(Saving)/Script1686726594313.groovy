@@ -33,3 +33,7 @@ println('RC is : ' + RC)
 
 WS.verifyResponseStatusCode(danaAdviceResponse, 200)
 
+String responseBody = danaAdviceResponse.getResponseBodyContent()
+// Menampilkan response body di console
+println("Response Body:")
+println(responseBody)
