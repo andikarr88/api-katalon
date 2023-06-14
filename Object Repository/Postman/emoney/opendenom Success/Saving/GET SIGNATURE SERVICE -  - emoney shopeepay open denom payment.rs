@@ -6,16 +6,24 @@
    <elementGuidId>0100c4a8-d43e-4582-ba60-2819e0b20374</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <autoUpdateContent>true</autoUpdateContent>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\r\n    \&quot;cardNumber\&quot;: \&quot;0000000000000000\&quot;,\r\n    \&quot;accountType\&quot;: \&quot;10\&quot;,\r\n    \&quot;transactionAmount\&quot;: 21000,\r\n    \&quot;transDateTime\&quot;: \&quot;${transDateTime}\&quot;,\r\n    \&quot;traceNumber\&quot;: \&quot;000001\&quot;,\r\n    \&quot;localTime\&quot;: \&quot;${localTime}\&quot;,\r\n    \&quot;localDate\&quot;: \&quot;${localDate}\&quot;,\r\n    \&quot;settlementDate\&quot;: \&quot;${settlementDate}\&quot;,\r\n    \&quot;channelCode\&quot;: \&quot;6017\&quot;,\r\n    \&quot;posEntryMode\&quot;: \&quot;999\&quot;,\r\n    \&quot;acquirerID\&quot;: \&quot;00000000119\&quot;,\r\n    \&quot;referenceNumber\&quot;: \&quot;${referenceNumber}\&quot;,\r\n    \&quot;terminalID\&quot;: \&quot;0000000000000003\&quot;,\r\n    \&quot;terminalNameLoc\&quot;: \&quot;TEST MENARA DEA       JAKARTA SELAT068ID\&quot;,\r\n    \&quot;transactionData\&quot;: \&quot;${transactionData}\&quot;,\r\n    \&quot;currencyCode\&quot;: \&quot;360\&quot;,\r\n    \&quot;nationalPmtData\&quot;: \&quot;${nationalPmtData}\&quot;,\r\n    \&quot;issuerCode\&quot;: \&quot;00000000119\&quot;,\r\n    \&quot;transactionIndicator\&quot;: \&quot;2\&quot;,\r\n    \&quot;destinationInstCode\&quot;: \&quot;91800003500\&quot;\r\n}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;cardNumber\&quot;: \&quot;0000000000000000\&quot;,\n    \&quot;accountType\&quot;: \&quot;10\&quot;,\n    \&quot;transactionAmount\&quot;: 21500,\n    \&quot;transDateTime\&quot;: \&quot;${GlobalVariable.transDateTime}\&quot;,\n    \&quot;traceNumber\&quot;: \&quot;000001\&quot;,\n    \&quot;localTime\&quot;: \&quot;${GlobalVariable.localTime}\&quot;,\n    \&quot;localDate\&quot;: \&quot;${GlobalVariable.localDate}\&quot;,\n    \&quot;settlementDate\&quot;: \&quot;${GlobalVariable.settlementDate}\&quot;,\n    \&quot;channelCode\&quot;: \&quot;6017\&quot;,\n    \&quot;posEntryMode\&quot;: \&quot;999\&quot;,\n    \&quot;acquirerID\&quot;: \&quot;00000000119\&quot;,\n    \&quot;referenceNumber\&quot;: \&quot;${GlobalVariable.referenceNumber}\&quot;,\n    \&quot;terminalID\&quot;: \&quot;0000000000000003\&quot;,\n    \&quot;terminalNameLoc\&quot;: \&quot;TEST MENARA DEA       JAKARTA SELAT068ID\&quot;,\n    \&quot;transactionData\&quot;: \&quot;${GlobalVariable.transactionData}\&quot;,\n    \&quot;currencyCode\&quot;: \&quot;360\&quot;,\n    \&quot;nationalPmtData\&quot;: \&quot;${GlobalVariable.nationalPmtData}\&quot;,\n    \&quot;issuerCode\&quot;: \&quot;00000000119\&quot;,\n    \&quot;transactionIndicator\&quot;: \&quot;2\&quot;,\n    \&quot;destinationInstCode\&quot;: \&quot;91800003500\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/json</value>
+      <webElementGuid>aa8ababa-c416-4ebb-be58-98af56fd96b2</webElementGuid>
+   </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
@@ -29,7 +37,7 @@
       <matchCondition>equals</matchCondition>
       <name>x-timestamp</name>
       <type>Main</type>
-      <value>${TIMESTAMP}</value>
+      <value>${GlobalVariable.TIMESTAMP}</value>
       <webElementGuid>d340d3cc-54a3-44e2-bb53-ed576d6cc3a7</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
@@ -37,7 +45,7 @@
       <matchCondition>equals</matchCondition>
       <name>x-client-secret</name>
       <type>Main</type>
-      <value>${X_CLIENT_SECRET}</value>
+      <value>${GlobalVariable.X_CLIENT_SECRET}</value>
       <webElementGuid>cacbbcb3-f7d1-4ab5-a9d8-03288919228d</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
@@ -61,14 +69,14 @@
       <matchCondition>equals</matchCondition>
       <name>accesstoken</name>
       <type>Main</type>
-      <value>${TOKEN}</value>
+      <value>${GlobalVariable.TOKEN}</value>
       <webElementGuid>81ae5442-9a53-4f1c-8a41-d952eaa277ce</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.6.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${HOST}/auth/signature/service</restUrl>
+   <restUrl>${GlobalVariable.HOST}/auth/signature/service</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -77,82 +85,18 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>GlobalVariable.HOST</defaultValue>
-      <description></description>
-      <id>d243f27d-34e2-4058-b095-b64e23819b43</id>
-      <masked>false</masked>
-      <name>HOST</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.TIMESTAMP</defaultValue>
-      <description></description>
-      <id>b97379f3-1612-446f-99db-24f503eae6a6</id>
-      <masked>false</masked>
-      <name>TIMESTAMP</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.X_CLIENT_SECRET</defaultValue>
-      <description></description>
-      <id>7627d17f-e731-4ba6-a344-261ce29a6c37</id>
-      <masked>false</masked>
-      <name>X_CLIENT_SECRET</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.TOKEN</defaultValue>
-      <description></description>
-      <id>a6b6ff0c-86b1-4ccd-9307-1e7684fca744</id>
-      <masked>false</masked>
-      <name>TOKEN</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.transDateTime</defaultValue>
-      <description></description>
-      <id>1f2e56dc-dab9-49e3-8e0b-a71511d9675d</id>
-      <masked>false</masked>
-      <name>transDateTime</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.localTime</defaultValue>
-      <description></description>
-      <id>32d0fccf-5412-4be9-9b93-3dd7917cd928</id>
-      <masked>false</masked>
-      <name>localTime</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.localDate</defaultValue>
-      <description></description>
-      <id>cd3fedcd-01ca-41f4-8119-44b4e2ccb4a3</id>
-      <masked>false</masked>
-      <name>localDate</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.settlementDate</defaultValue>
-      <description></description>
-      <id>7b158a95-e3ff-462f-97f9-773896207b95</id>
-      <masked>false</masked>
-      <name>settlementDate</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.referenceNumber</defaultValue>
-      <description></description>
-      <id>6f43ac21-bb55-491a-a1e9-9e3b94c15e33</id>
-      <masked>false</masked>
-      <name>referenceNumber</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.transactionData</defaultValue>
-      <description></description>
-      <id>887ea18f-7652-4f6e-ae8a-7108cd4cbc8b</id>
-      <masked>false</masked>
-      <name>transactionData</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.nationalPmtData</defaultValue>
-      <description></description>
-      <id>8257cad5-2291-4fc3-99f7-fa4f2c7e1f8c</id>
-      <masked>false</masked>
-      <name>nationalPmtData</name>
-   </variables>
+   <verificationScript>import static org.assertj.core.api.Assertions.*
+
+import com.kms.katalon.core.testobject.RequestObject
+import com.kms.katalon.core.testobject.ResponseObject
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.webservice.verification.WSResponseManager
+
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
