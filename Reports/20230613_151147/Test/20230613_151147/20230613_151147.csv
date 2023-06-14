@@ -1,0 +1,92 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test,,,,2023-06-13 15:12:01,2023-06-13 15:12:22,20.805s,PASSED
+,,,,,,,
+Test Cases/GetTokenCase,,,,2023-06-13 15:12:02,2023-06-13 15:12:11,9.356s,PASSED
+currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:03,2023-06-13 15:12:03,0.057s,PASSED
+"formatter = DateTimeFormatter.ofPattern(""yyyy-MM-dd'T'HH:mm:ssxxx"")",,,,2023-06-13 15:12:03,2023-06-13 15:12:03,0.027s,PASSED
+formattedTimestamp = currentTime.format(formatter),,,,2023-06-13 15:12:03,2023-06-13 15:12:03,0.006s,PASSED
+"println(""Timestamp: "" + formattedTimestamp)",,,,2023-06-13 15:12:03,2023-06-13 15:12:03,0.013s,PASSED
+TIMESTAMP = formattedTimestamp,,,,2023-06-13 15:12:03,2023-06-13 15:12:04,1.304s,PASSED
+"signatureResponse = sendRequest(findTestObject(""Postman/auth/GET SIGNATURE""))",,,,2023-06-13 15:12:04,2023-06-13 15:12:09,5.033s,PASSED
+"signature = getElementPropertyValue(signatureResponse, ""signature"")",,,,2023-06-13 15:12:09,2023-06-13 15:12:09,0.139s,PASSED
+"println(""signature is :"" + signature)",,,,2023-06-13 15:12:09,2023-06-13 15:12:09,0.002s,PASSED
+AUTH_SIGNATURE = signature,,,,2023-06-13 15:12:09,2023-06-13 15:12:09,0.001s,PASSED
+"tokenResponse = sendRequest(findTestObject(""Postman/auth/GET TOKEN"", [""TIMESTAMP1"":TIMESTAMP, ""AUTH_SIGNATURE1"":AUTH_SIGNATURE]))",,,,2023-06-13 15:12:09,2023-06-13 15:12:11,1.367s,PASSED
+"verifyResponseStatusCode(tokenResponse, 200)",,,,2023-06-13 15:12:11,2023-06-13 15:12:11,0.031s,PASSED
+"token = getElementPropertyValue(tokenResponse, ""accessToken"")",,,,2023-06-13 15:12:11,2023-06-13 15:12:11,0.052s,PASSED
+"println(""Token is : "" + token)",,,,2023-06-13 15:12:11,2023-06-13 15:12:11,0.002s,PASSED
+TOKEN = token,,,,2023-06-13 15:12:11,2023-06-13 15:12:11,0.001s,PASSED
+,,,,,,,
+Test Cases/InquiryDanaCase(Saving),,,,2023-06-13 15:12:11,2023-06-13 15:12:16,5.387s,PASSED
+currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.004s,PASSED
+"formatter = DateTimeFormatter.ofPattern(""MMdd"")",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+formattedLocalDate = currentTime.format(formatter),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+"println(""Local Date: "" + formattedLocalDate)",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+localDate = formattedLocalDate,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+currentTime1 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+"formatter1 = DateTimeFormatter.ofPattern(""HHmmss"")",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+formattedLocalTime = currentTime1.format(formatter1),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+"println(""Local Time: "" + formattedLocalTime)",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+localTime = formattedLocalTime,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+formattedTransDateTime = formattedLocalDate + formattedLocalTime,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+"println(""Trans Date Time: "" + formattedTransDateTime)",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+transDateTime = formattedTransDateTime,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+currentTime2 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+"formatter2 = DateTimeFormatter.ofPattern(""MMdd"")",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+formattedSettlementDate = plusDays(1).format(formatter2),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.005s,PASSED
+"println(""SettlementDate: "" + formattedSettlementDate)",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+settlementDate = formattedSettlementDate,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+currentTime3 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+"formatter3 = DateTimeFormatter.ofPattern(""yyMMddHHmmss"")",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.002s,PASSED
+formattedReferenceNumber = currentTime3.format(formatter3),,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.004s,PASSED
+"println(""Reference Number: "" + formattedReferenceNumber)",,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+referenceNumber = formattedReferenceNumber,,,,2023-06-13 15:12:12,2023-06-13 15:12:12,0.001s,PASSED
+"signatureResponse = sendRequest(findTestObject(""Postman/emoney/opendenom Success/Saving/GET SIGNATURE SERVICE -  emoney dana open denom inquiry""))",,,,2023-06-13 15:12:12,2023-06-13 15:12:13,0.775s,PASSED
+"signature = getElementPropertyValue(signatureResponse, ""signature"")",,,,2023-06-13 15:12:13,2023-06-13 15:12:13,0.041s,PASSED
+"println(""signature service is :"" + signature)",,,,2023-06-13 15:12:13,2023-06-13 15:12:13,0.001s,PASSED
+SERVICE_SIGNATURE = signature,,,,2023-06-13 15:12:13,2023-06-13 15:12:13,0.000s,PASSED
+"danaInquiryResponse = sendRequest(findTestObject(""Postman/emoney/opendenom Success/Saving/dana inquiry""))",,,,2023-06-13 15:12:13,2023-06-13 15:12:16,3.127s,PASSED
+"RC = getElementPropertyValue(danaInquiryResponse, ""responseCode"")",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.050s,PASSED
+"println(""RC is : "" + RC)",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.001s,PASSED
+"transactionData = getElementPropertyValue(danaInquiryResponse, ""transactionData"")",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.057s,PASSED
+transactionData = transactionData,,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.001s,PASSED
+"println(""transaction data is : "" + transactionData)",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.001s,PASSED
+"nationalPmtData = getElementPropertyValue(danaInquiryResponse, ""nationalPmtData"")",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.056s,PASSED
+nationalPmtData1 = nationalPmtData,,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.001s,PASSED
+"replacedNationalPmtData = nationalPmtData1.replaceAll("""""", ""\\"""")",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.008s,PASSED
+nationalPmtData = replacedNationalPmtData,,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.002s,PASSED
+"println(""National Payment Data is : "" + replacedNationalPmtData)",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.002s,PASSED
+"verifyResponseStatusCode(danaInquiryResponse, 200)",,,,2023-06-13 15:12:16,2023-06-13 15:12:16,0.006s,PASSED
+,,,,,,,
+Test Cases/PaymentDanaCase(Saving),,,,2023-06-13 15:12:16,2023-06-13 15:12:22,5.390s,PASSED
+currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.002s,PASSED
+"formatter = DateTimeFormatter.ofPattern(""MMdd"")",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.002s,PASSED
+formattedLocalDate = currentTime.format(formatter),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"println(""Local Date: "" + formattedLocalDate)",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.000s,PASSED
+localDate = formattedLocalDate,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.000s,PASSED
+currentTime1 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"formatter1 = DateTimeFormatter.ofPattern(""HHmmss"")",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+formattedLocalTime = currentTime1.format(formatter1),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"println(""Local Time: "" + formattedLocalTime)",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+localTime = formattedLocalTime,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+formattedTransDateTime = formattedLocalDate + formattedLocalTime,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"println(""Trans Date Time: "" + formattedTransDateTime)",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+transDateTime = formattedTransDateTime,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+currentTime2 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"formatter2 = DateTimeFormatter.ofPattern(""MMdd"")",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.000s,PASSED
+formattedSettlementDate = plusDays(1).format(formatter2),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"println(""SettlementDate: "" + formattedSettlementDate)",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+settlementDate = formattedSettlementDate,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.000s,PASSED
+currentTime3 = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"formatter3 = DateTimeFormatter.ofPattern(""yyMMddHHmmss"")",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+formattedReferenceNumber = currentTime3.format(formatter3),,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.003s,PASSED
+"println(""Reference Number: "" + formattedReferenceNumber)",,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.002s,PASSED
+referenceNumber = formattedReferenceNumber,,,,2023-06-13 15:12:18,2023-06-13 15:12:18,0.001s,PASSED
+"signatureResponse = sendRequest(findTestObject(""Postman/emoney/opendenom Success/Saving/GET SIGNATURE SERVICE -  - emoney dana open denom payment""))",,,,2023-06-13 15:12:18,2023-06-13 15:12:19,0.822s,PASSED
+"signature = getElementPropertyValue(signatureResponse, ""signature"")",,,,2023-06-13 15:12:19,2023-06-13 15:12:19,0.037s,PASSED
+"println(""signature service is :"" + signature)",,,,2023-06-13 15:12:19,2023-06-13 15:12:19,0.002s,PASSED
+SERVICE_SIGNATURE = signature,,,,2023-06-13 15:12:19,2023-06-13 15:12:19,0.001s,PASSED
+"danaPaymentResponse = sendRequest(findTestObject(""Postman/emoney/opendenom Success/Saving/dana payment""))",,,,2023-06-13 15:12:19,2023-06-13 15:12:22,3.051s,PASSED
+"RC = getElementPropertyValue(danaPaymentResponse, ""responseCode"")",,,,2023-06-13 15:12:22,2023-06-13 15:12:22,0.043s,PASSED
+"println(""RC is : "" + RC)",,,,2023-06-13 15:12:22,2023-06-13 15:12:22,0.002s,PASSED
+"verifyResponseStatusCode(danaPaymentResponse, 200)",,,,2023-06-13 15:12:22,2023-06-13 15:12:22,0.005s,PASSED

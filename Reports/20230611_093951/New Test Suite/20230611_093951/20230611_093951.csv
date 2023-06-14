@@ -1,0 +1,9 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+New Test Suite,,,,2023-06-11 09:40:08,2023-06-11 09:40:12,3.892s,PASSED
+,,,,,,,
+Test Cases/SetTimestampToGlobal,,,,2023-06-11 09:40:09,2023-06-11 09:40:12,3.214s,PASSED
+currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-11 09:40:10,2023-06-11 09:40:11,0.154s,PASSED
+"formatter = DateTimeFormatter.ofPattern(""yyyy-MM-dd'T'HH:mm:ssxxx"")",,,,2023-06-11 09:40:11,2023-06-11 09:40:11,0.040s,PASSED
+formattedTimestamp = currentTime.format(formatter),,,,2023-06-11 09:40:11,2023-06-11 09:40:11,0.010s,PASSED
+"println(""Timestamp: "" + formattedTimestamp)",,,,2023-06-11 09:40:11,2023-06-11 09:40:11,0.012s,PASSED
+TIMESTAMP = formattedTimestamp,,,,2023-06-11 09:40:11,2023-06-11 09:40:12,1.331s,PASSED

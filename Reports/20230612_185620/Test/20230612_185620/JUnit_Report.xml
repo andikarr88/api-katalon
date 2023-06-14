@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Test" time="12.299" tests="2" failures="1" errors="0">
+   <testsuite name="Test" tests="2" failures="1" errors="0" time="12.299" skipped="0" timestamp="2023-06-12 18:56:33" hostname="ABISHAR - Lenovo" id="Test Suites/Test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\ABISHAR\\Katalon Studio\\My First API Project\\Reports\\20230612_185620\\Test\\20230612_185620"/>
+         <property name="logFiles" value="C:\\Users\\ABISHAR\\Katalon Studio\\My First API Project\\Reports\\20230612_185620\\Test\\20230612_185620\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="ABISHAR - Lenovo"/>
+         <property name="hostAddress" value="10.131.0.28"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="8.6.5.208"/>
+      </properties>
+      <testcase name="Test Cases/GetTokenCase" time="8.688" classname="Test Cases/GetTokenCase" status="PASSED">
+         <system-out><![CDATA[2023-06-12 18:56:34 - [TEST_CASE][PASSED] - Test Cases/GetTokenCase: Test Cases/GetTokenCase
+
+2023-06-12 18:56:35 - [TEST_STEP][PASSED] - currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)): null
+
+2023-06-12 18:56:35 - [TEST_STEP][PASSED] - formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssxxx"): null
+
+2023-06-12 18:56:35 - [TEST_STEP][PASSED] - formattedTimestamp = currentTime.format(formatter): null
+
+2023-06-12 18:56:35 - [TEST_STEP][PASSED] - println("Timestamp: " + formattedTimestamp): null
+
+2023-06-12 18:56:35 - [TEST_STEP][PASSED] - TIMESTAMP = formattedTimestamp: null
+
+2023-06-12 18:56:36 - [TEST_STEP][PASSED] - signatureResponse = sendRequest(findTestObject("Postman/auth/GET SIGNATURE")): Send request successfully
+
+2023-06-12 18:56:42 - [MESSAGE][INFO] - HAR: C:\Users\ABISHAR\Katalon Studio\My First API Project\Reports\20230612_185620\Test\20230612_185620\requests\main\0.har
+
+2023-06-12 18:56:42 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - signature = getElementPropertyValue(signatureResponse, "signature"): null
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - println("signature is :" + signature): null
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - AUTH_SIGNATURE = signature: null
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - tokenResponse = sendRequest(findTestObject("Postman/auth/GET TOKEN", ["TIMESTAMP1":TIMESTAMP, "AUTH_SIGNATURE1":AUTH_SIGNATURE])): Send request successfully
+
+2023-06-12 18:56:42 - [MESSAGE][INFO] - HAR: C:\Users\ABISHAR\Katalon Studio\My First API Project\Reports\20230612_185620\Test\20230612_185620\requests\main\1.har
+
+2023-06-12 18:56:42 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - verifyResponseStatusCode(tokenResponse, 200): Verify response status code successfully
+
+2023-06-12 18:56:42 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-06-12 18:56:42 - [TEST_STEP][PASSED] - token = getElementPropertyValue(tokenResponse, "accessToken"): null
+
+2023-06-12 18:56:43 - [TEST_STEP][PASSED] - println("Token is : " + token): null
+
+2023-06-12 18:56:43 - [TEST_STEP][PASSED] - TOKEN = token: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/InquiryDanaCase(Saving)" time="2.96" classname="Test Cases/InquiryDanaCase(Saving)" status="FAILED">
+         <failure type="FAILED" message="Test Cases/InquiryDanaCase(Saving) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)
+"/>
+         <system-out><![CDATA[2023-06-12 18:56:43 - [TEST_CASE][FAILED] - Test Cases/InquiryDanaCase(Saving): Test Cases/InquiryDanaCase(Saving) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)
+
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formatter = DateTimeFormatter.ofPattern("MMdd"): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formattedLocalDate = currentTime.format(formatter): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - println("Local Date: " + formattedLocalDate): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - localDate = formattedLocalDate: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - currentTime1 = ZonedDateTime.now(ZoneOffset.ofHours(7)): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formatter1 = DateTimeFormatter.ofPattern("HHmmss"): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formattedLocalTime = currentTime1.format(formatter1): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - println("Local Time: " + formattedLocalTime): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - localTime = formattedLocalTime: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formattedTransDateTime = formattedLocalDate + formattedLocalTime: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - println("Trans Date Time: " + formattedTransDateTime): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - transDateTime = formattedTransDateTime: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - currentTime2 = ZonedDateTime.now(ZoneOffset.ofHours(7)): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formatter2 = DateTimeFormatter.ofPattern("MMdd"): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formattedSettlementDate = plusDays(1).format(formatter2): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - println("SettlementDate: " + formattedSettlementDate): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - settlementDate = formattedSettlementDate: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - currentTime3 = ZonedDateTime.now(ZoneOffset.ofHours(7)): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formatter3 = DateTimeFormatter.ofPattern("yyMMddHHmmss"): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - formattedReferenceNumber = currentTime3.format(formatter3): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - println("Reference Number: " + formattedReferenceNumber): null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - referenceNumber = formattedReferenceNumber: null
+
+2023-06-12 18:56:44 - [TEST_STEP][PASSED] - signatureResponse = sendRequest(findTestObject("Postman/emoney/opendenom Success/Saving/GET SIGNATURE SERVICE -  emoney dana open denom inquiry")): Send request successfully
+
+2023-06-12 18:56:45 - [MESSAGE][INFO] - HAR: C:\Users\ABISHAR\Katalon Studio\My First API Project\Reports\20230612_185620\Test\20230612_185620\requests\main\2.har
+
+2023-06-12 18:56:45 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-12 18:56:45 - [TEST_STEP][PASSED] - signature = getElementPropertyValue(signatureResponse, "signature"): null
+
+2023-06-12 18:56:45 - [TEST_STEP][PASSED] - println("signature service is :" + signature): null
+
+2023-06-12 18:56:45 - [TEST_STEP][PASSED] - SERVICE_SIGNATURE = signature: null
+
+2023-06-12 18:56:45 - [TEST_STEP][PASSED] - danaInquiryResponse = sendRequest(findTestObject("Postman/emoney/opendenom Success/Saving/dana inquiry", ["HOST1":HOST, "TIMESTAMP1":TIMESTAMP, "SERVICE_SIGNATURE1":SERVICE_SIGNATURE, "transDateTime1":transDateTime, "localTime1":localTime, ... ])): Send request successfully
+
+2023-06-12 18:56:45 - [MESSAGE][INFO] - HAR: C:\Users\ABISHAR\Katalon Studio\My First API Project\Reports\20230612_185620\Test\20230612_185620\requests\main\3.har
+
+2023-06-12 18:56:45 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-12 18:56:45 - [TEST_STEP][FAILED] - verifyResponseStatusCode(danaInquiryResponse, 200): Unable to verify response status code (Root cause: com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)
+)
+
+2023-06-12 18:56:45 - [MESSAGE][FAILED] - Expected status code is '200' but actual status code is '401'
+
+2023-06-12 18:56:45 - [MESSAGE][FAILED] - Unable to verify response status code (Root cause: com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)
+)]]></system-out>
+         <system-err><![CDATA[2023-06-12 18:56:43 - [TEST_CASE][FAILED] - Test Cases/InquiryDanaCase(Saving): Test Cases/InquiryDanaCase(Saving) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-06-12 18:56:33 - [TEST_SUITE][FAILED] - Test: Test Cases/InquiryDanaCase(Saving) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)]]></system-out>
+      <system-err><![CDATA[2023-06-12 18:56:33 - [TEST_SUITE][FAILED] - Test: Test Cases/InquiryDanaCase(Saving) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Expected status code is '200' but actual status code is '401'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:51)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyStatusCode(VerifyResponseStatusCodeKeyword.groovy:52)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.access$1(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.doCall(VerifyResponseStatusCodeKeyword.groovy:42)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword$_verifyResponseStatusCode_closure1.call(VerifyResponseStatusCodeKeyword.groovy)
+	at com.kms.katalon.core.keyword.internal.KeywordMain.runKeyword(KeywordMain.groovy:75)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.verifyResponseStatusCode(VerifyResponseStatusCodeKeyword.groovy:37)
+	at com.kms.katalon.core.webservice.keyword.builtin.VerifyResponseStatusCodeKeyword.execute(VerifyResponseStatusCodeKeyword.groovy:32)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:74)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords.verifyResponseStatusCode(WSBuiltInKeywords.groovy:345)
+	at com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords$verifyResponseStatusCode$1.call(Unknown Source)
+	at InquiryDanaCase(Saving).run(InquiryDanaCase(Saving):97)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:448)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:439)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:418)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:410)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:285)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:65)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:148)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:106)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:187)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1686570980083.run(TempTestSuite1686570980083.groovy:36)]]></system-err>
+   </testsuite>
+</testsuites>

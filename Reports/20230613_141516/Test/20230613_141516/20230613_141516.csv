@@ -1,0 +1,20 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Test,,,,2023-06-13 14:15:31,2023-06-13 14:15:41,9.531s,ERROR
+,,,,,,,
+Test Cases/GetTokenCase,,,,2023-06-13 14:15:32,2023-06-13 14:15:40,7.752s,PASSED
+currentTime = ZonedDateTime.now(ZoneOffset.ofHours(7)),,,,2023-06-13 14:15:33,2023-06-13 14:15:33,0.079s,PASSED
+"formatter = DateTimeFormatter.ofPattern(""yyyy-MM-dd'T'HH:mm:ssxxx"")",,,,2023-06-13 14:15:33,2023-06-13 14:15:33,0.050s,PASSED
+formattedTimestamp = currentTime.format(formatter),,,,2023-06-13 14:15:33,2023-06-13 14:15:33,0.008s,PASSED
+"println(""Timestamp: "" + formattedTimestamp)",,,,2023-06-13 14:15:33,2023-06-13 14:15:33,0.013s,PASSED
+TIMESTAMP = formattedTimestamp,,,,2023-06-13 14:15:33,2023-06-13 14:15:34,0.901s,PASSED
+"signatureResponse = sendRequest(findTestObject(""Postman/auth/GET SIGNATURE""))",,,,2023-06-13 14:15:34,2023-06-13 14:15:39,4.507s,PASSED
+"signature = getElementPropertyValue(signatureResponse, ""signature"")",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.171s,PASSED
+"println(""signature is :"" + signature)",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.002s,PASSED
+AUTH_SIGNATURE = signature,,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.001s,PASSED
+"tokenResponse = sendRequest(findTestObject(""Postman/auth/GET TOKEN"", [""TIMESTAMP1"":TIMESTAMP, ""AUTH_SIGNATURE1"":AUTH_SIGNATURE]))",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.639s,PASSED
+"verifyResponseStatusCode(tokenResponse, 200)",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.034s,PASSED
+"token = getElementPropertyValue(tokenResponse, ""accessToken"")",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.059s,PASSED
+"println(""Token is : "" + token)",,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.002s,PASSED
+TOKEN = token,,,,2023-06-13 14:15:39,2023-06-13 14:15:39,0.001s,PASSED
+,,,,,,,
+Test Cases/InquiryDanaCase(Saving),,,,2023-06-13 14:15:40,2023-06-13 14:15:41,1.150s,ERROR
