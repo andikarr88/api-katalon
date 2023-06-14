@@ -102,5 +102,5 @@ RC = WS.getElementPropertyValue(danaPaymentResponse, 'responseCode')
 println('RC is : ' + RC)
 
 WS.verifyResponseStatusCode(danaPaymentResponse, 200)
-WS.verifyElementPropertyValue(danaPaymentResponse, 'responseCode', '68')
+WS.verifyElementPropertyValue(danaPaymentResponse, 'responseCode', '00')
 
