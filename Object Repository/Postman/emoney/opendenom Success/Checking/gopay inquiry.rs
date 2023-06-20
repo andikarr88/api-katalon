@@ -49,6 +49,14 @@
       <value>${GlobalVariable.SERVICE_SIGNATURE}</value>
       <webElementGuid>23c71ee3-7b64-4b29-b77d-22686dc0c345</webElementGuid>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Authorization</name>
+      <type>Main</type>
+      <value>Bearer ${GlobalVariable.TOKEN}</value>
+      <webElementGuid>1a3584a0-e0a5-4107-9f03-e95e4c3bced1</webElementGuid>
+   </httpHeaderProperties>
    <katalonVersion>8.6.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
