@@ -22,21 +22,21 @@
       <guid>8f73dc23-2b78-4d86-9d30-78d0662a186c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Saving/InquiryShopeePayCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Saving/InquiryShopeePayCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>17991f49-bc5b-4fb3-8edc-99ccdbc26dfd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/PaymentShopeePayCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/PaymentShopeePayCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>1c7e77ad-ad27-455e-bc80-10412d08beb0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/AdviceShopeePayCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/AdviceShopeePayCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

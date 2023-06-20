@@ -22,21 +22,21 @@
       <guid>102e9612-1339-4c3a-9d7e-2db28b70474e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/InquiryLinkAjaCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/InquiryLinkAjaCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>ef944ef2-a75f-4336-acc4-bc277110bec2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/PaymentLinkAjaCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/PaymentLinkAjaCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>74fc6c99-f4bf-4d78-9640-5043740049bf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/AdviceLinkAjaCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/AdviceLinkAjaCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

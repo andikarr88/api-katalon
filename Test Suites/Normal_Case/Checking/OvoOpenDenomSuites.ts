@@ -22,21 +22,21 @@
       <guid>7ae650f8-d726-4f2a-9931-c262b6a72384</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Saving/InquiryOvoCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Saving/InquiryOvoCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0c104868-19f4-4b13-b413-6b2b47f036b3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/PaymentOvoCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/PaymentOvoCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>863033fe-e79e-4df4-ba44-b9af8933d4dc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Checking/AdviceOvoCase(Checking)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Checking/AdviceOvoCase(Checking)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -22,21 +22,21 @@
       <guid>d6476064-ae51-4099-8e2e-658825465b0b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Saving/InquiryGopayCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Saving/InquiryGopayCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>d8166c91-c029-4d87-82c0-7297cf7d4135</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Saving/PaymentGopayCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Saving/PaymentGopayCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>b9fc4333-d337-463a-9229-85029c785d63</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/EMoney/Saving/AdviceGopayCase(Saving)</testCaseId>
+      <testCaseId>Test Cases/EMoney/Success/Saving/AdviceGopayCase(Saving)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
